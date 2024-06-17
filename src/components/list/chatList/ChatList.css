@@ -1,39 +1,114 @@
-.chatlist{
-    .search{
+.chatlist {
+    flex: 1;
+    overflow-y: scroll;
+    scrollbar-color: rgba(17, 25, 40, .5) rgba(17, 25, 40, .2); /* Firefox */
+    scrollbar-width: thin; /* Firefox */
+
+    .search {
         display: flex;
         padding: 20px;
         align-items: center;
         gap: 20px;
-        
 
-        .searchBar{
+        .searchBar {
             flex: 1;
-            background-color: rgba(17,25,40,.5);
+            background-color: rgba(17, 25, 40, .5);
             display: flex;
             align-items: center;
             gap: 20px;
             border-radius: 10px;
             padding: 10px;
 
-            input{
+            input {
                 background-color: transparent;
                 border: none;
                 outline: none;
                 color: white;
-                flex:1;
+                flex: 1;
             }
-            img{
+
+            img {
                 width: 20px;
                 height: 20px;
             }
         }
-        .add{
-            width: 36xp;
+
+        .add {
+            width: 36px;
             height: 36px;
-            background-color: rgba(17,25,40,.5);
+            background-color: rgba(17, 25, 40, .5);
             padding: 10px;
             border-radius: 10px;
             cursor: pointer;
         }
     }
+
+    .item {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        cursor: pointer;
+        border-bottom: 1px solid rgb(117, 115, 115);
+
+        img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .texts {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            span {
+                font-weight: 500;
+            }
+
+            p {
+                font-weight: 300;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+/* WebKit-based browsers (Chrome, Safari) */
+.chatlist::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+.chatlist::-webkit-scrollbar-track {
+    background: rgba(17, 25, 40, .2); /* Background of the scrollbar track */
+    border-radius: 10px;
+}
+
+.chatlist::-webkit-scrollbar-thumb {
+    background-color: rgba(17, 25, 40, .5); /* Color of the scrollbar thumb */
+    border-radius: 10px;
+    border: 3px solid rgba(17, 25, 40, .2); /* Optional: adds a border to the thumb */
+}
+
+/* Edge and other modern browsers */
+.chatlist {
+    scrollbar-width: thin; /* Makes the scrollbar thin */
+    scrollbar-color: rgba(17, 25, 40, .5) rgba(17, 25, 40, .2); /* Scrollbar thumb and track color */
+}
+
+/* Edge and other modern browsers using custom properties */
+.chatlist::-webkit-scrollbar {
+    width: 12px;
+}
+
+.chatlist::-webkit-scrollbar-track {
+    background: rgba(17, 25, 40, .2);
+    border-radius: 10px;
+}
+
+.chatlist::-webkit-scrollbar-thumb {
+    background-color: rgba(17, 25, 40, .5);
+    border-radius: 10px;
+    border: 3px solid rgba(17, 25, 40, .2);
 }

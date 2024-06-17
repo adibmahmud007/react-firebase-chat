@@ -16,7 +16,60 @@ const ChatList = () => {
                  />
             </div>
             <div className="item">
-                
+                <img src="./avatar.png" alt="" />
+                <div className="texts">
+                    <span>Adib Mahmud</span>
+                    <p>Hello</p>
+                </div>
+            </div>
+            <div className="item">
+                <img src="./avatar.png" alt="" />
+                <div className="texts">
+                    <span>Adib Mahmud</span>
+                    <p>Hello</p>
+                </div>
+            </div>
+            <div className="item">
+                <img src="./avatar.png" alt="" />
+                <div className="texts">
+                    <span>Adib Mahmud</span>
+                    <p>Hello</p>
+                </div>
+            </div>
+            <div className="item">
+                <img src="./avatar.png" alt="" />
+                <div className="texts">
+                    <span>Adib Mahmud</span>
+                    <p>Hello</p>
+                </div>
+            </div>
+            <div className="item">
+                <img src="./avatar.png" alt="" />
+                <div className="texts">
+                    <span>Adib Mahmud</span>
+                    <p>Hello</p>
+                </div>
+            </div>
+            <div className="item">
+                <img src="./avatar.png" alt="" />
+                <div className="texts">
+                    <span>Adib Mahmud</span>
+                    <p>Hello</p>
+                </div>
+            </div>
+            <div className="item">
+                <img src="./avatar.png" alt="" />
+                <div className="texts">
+                    <span>Adib Mahmud</span>
+                    <p>Hello</p>
+                </div>
+            </div>
+            <div className="item">
+                <img src="./avatar.png" alt="" />
+                <div className="texts">
+                    <span>Adib Mahmud</span>
+                    <p>Hello</p>
+                </div>
             </div>
         </div>
     );
