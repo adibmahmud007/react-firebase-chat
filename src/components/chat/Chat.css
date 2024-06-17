@@ -5,6 +5,8 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    scrollbar-color: rgba(17, 25, 40, .5) rgba(17, 25, 40, .2); /* Firefox */
+    scrollbar-width: thin; 
     
 
     .top{
@@ -59,6 +61,57 @@
     .center{
         padding: 20px;
         flex: 1;
+
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .message{
+            max-width: 70%;
+            display: flex;
+            gap: 20px;
+
+            &.own{
+                align-self: flex-end;
+
+                .texts{
+                    p{
+                        background-color:#5183fe;
+                        border-radius: 10px;
+                    }
+                }
+            }
+
+            img{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+            .texts{
+                flex:1;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                img{
+                    width: 100%;
+                    height: 300px;
+                    border-radius: 10px;
+                    object-fit: cover;
+                }
+
+                p{
+                    padding: 20px;
+                    background-color: rgba(17,25,40,.5);
+                    border-radius: 10px;
+                }
+                span{
+                    font-size: 13px;
+                }
+            }
+        }
     }
 
 
@@ -115,6 +168,10 @@
             font-size: 14px;
         }
     }
+    /* .chat::-webkit-scrollbar {
+        width: 12px; /* Width of the scrollbar */
+    }
+    
+    
 
     
-}

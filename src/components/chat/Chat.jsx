@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./Chat.css"
 import EmojiPicker from "emoji-picker-react";
 const Chat = () => {
@@ -10,7 +10,14 @@ const Chat = () => {
         setText((prev)=> prev + e.emoji);
         setOpen(false);
     }
-    console.log(text);
+
+    const endRef=useRef(null);
+
+    useEffect(()=>{
+        endRef.current?.scrollIntoView({behavior: "smooth"});
+    },[]);
+
+
     return (
         <div className="chat">
             <div className="top">
@@ -28,7 +35,49 @@ const Chat = () => {
                 </div>
             </div>
             <div className="center">
+                <div className="message">
+                    <img src="./avatar.png" alt="" />
+                    <div className="texts">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores adipisci maiores assumenda mollitia optio saepe?</p>
+                        <span>1 min ago</span>
+                    </div>
+                </div>
+                <div className="message own">
+                    <div className="texts">
+                        <img src="./avatar.png" alt="" />
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores adipisci maiores assumenda mollitia optio saepe?</p>
+                        <span>1 min ago</span>
+                    </div>
+                </div>
+                <div className="message">
+                    <img src="./avatar.png" alt="" />
+                    <div className="texts">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores adipisci maiores assumenda mollitia optio saepe?</p>
+                        <span>1 min ago</span>
+                    </div>
+                </div>
+                <div className="message own">
+                    <div className="texts">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores adipisci maiores assumenda mollitia optio saepe?</p>
+                        <span>1 min ago</span>
+                    </div>
+                </div>
+                <div className="message">
+                    <img src="./avatar.png" alt="" />
+                    <div className="texts">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores adipisci maiores assumenda mollitia optio saepe?</p>
+                        <span>1 min ago</span>
+                    </div>
+                </div>
+                <div className="message own">
+                    <div className="texts">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores adipisci maiores assumenda mollitia optio saepe?</p>
+                        <span>1 min ago</span>
+                    </div>
+                </div>
+                <div ref={endRef}>
 
+                </div>
             </div>
             <div className="bottom">
                 <div className="icons">
